@@ -8,9 +8,29 @@ let huntingRadio = document.getElementById("hunting");
 
 let testBuffer = new ArrayBuffer(16);
 
-if (testBuffer.byteLength === 16) {
-  alert("Yes!");
-}
+let view1 = new Int8Array(testBuffer);
+let view2 = new Int16Array(testBuffer);
+let view3 = new DataView(testBuffer);
+view1[0] = 32;
+view2[0] = 32;
+console.log(view1);
+console.log(view2);
+
+view3.setInt8(2, 43);
+console.log(view3);
+let number = view3.getInt8(2);
+console.log(number);
+let view4 = new DataView(testBuffer);
+let number2 = view4.getInt8(2);
+console.log(number2);
+
+let view5 = new DataView(testBuffer, 7, 3);
+view5.setInt8(0, 54);
+view5.setInt8(1, 23);
+view5.setInt8(2, 32);
+
+let numberToAlert = view5.getInt8(0);
+console.log(numberToAlert);
 
 // Add Sales
 function addSale() {}
