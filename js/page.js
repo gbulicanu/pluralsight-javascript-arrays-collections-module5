@@ -1,25 +1,21 @@
 // Accessing the objects
-var yearlyLabel = document.getElementById('yearlyTotal');
-var newAmount = document.getElementById('itemAmount');
-var newMonth = document.getElementById('monthId');
-let hikingRadio = document.getElementById('hiking');
-let runningRadio = document.getElementById('running');
-let huntingRadio = document.getElementById('hunting');
+var yearlyLabel = document.getElementById("yearlyTotal");
+var newAmount = document.getElementById("itemAmount");
+var newMonth = document.getElementById("monthId");
+let hikingRadio = document.getElementById("hiking");
+let runningRadio = document.getElementById("running");
+let huntingRadio = document.getElementById("hunting");
 
-// Code goes here
+let testBuffer = new ArrayBuffer(16);
+
+if (testBuffer.byteLength === 16) {
+  alert("Yes!");
+}
 
 // Add Sales
-function addSale(){
-	
+function addSale() {}
 
-
-}
-
-function findSale(){
-
-	
-
-}
+function findSale() {}
 
 // Bar chart
 // var monthlySalesChart = new Chart(ctx, {
@@ -65,6 +61,6 @@ function findSale(){
 //         }]
 //     },
 //     options: {
-        
+
 //     }
 // })
